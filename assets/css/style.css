@@ -1,0 +1,13 @@
+.jumbotron{
+    padding:0;
+}
+.headings{
+    font-family: 'Eater', cursive;
+    font-size:3rem;
+}
+.texts{
+    color:rgb(194, 191, 34);
+}
+body{
+    background: url("assets/images/large.jpg") no-repeat fixed center;
+}
