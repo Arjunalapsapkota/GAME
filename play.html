@@ -14,7 +14,7 @@
 
 <!--*******************************************************************************************-->
  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
- 
+ <script src="assets/javascript/main.js"></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarmenu">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-            <a class="nav-link" href="index.html">Play</a>
+            <a class="nav-link" href="play.html">Play</a>
             </li>
                 <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -47,31 +47,40 @@
 
     <!-- ######   buttons heading ##########-->
     <div id="btn-wrapper" class="align-center">   
-    <a href="play.html" class="btn btn-primary" id="playNow">Play Now</a>
-    <a href="play.html" class="btn btn-primary display" id="reset">Reset</a>
+    <a href="play.html" class="btn btn-primary display" id="playNow">Play Now</a>
+    <a href="play.html" class="btn btn-primary" id="reset">Reset</a>
     </div>
-    <div id="content"></div>
-    <div class="texts" id="description">
-            <div class="text-center">
-                <p>The <strong>Kurukshetra War</strong>, also called the Mahabharata War, is an war described in the Indian epic Mahabharata. It is the war between the good and the bad.</p>
-                <p>Press the <strong>Play Now</strong> button to play the game</p>
+    <div class="container" id="content">
+        <div id="chooseDiv">
+            <h1 id="chooseCharacter" class="whiteText" >Choose your character:</h1>
+        </div>
+        <section id="characterList">
+            <div class="row">
+               <div class="image-holder position-center" id="arjun" value="arjun">
+                    <img src="assets/images/arjun.jpg" class="place-image">
+                    <h3>Arjun</h3>
+                </div>
+                <div class="image-holder position-center" id="bhim" value="bhim">
+                    <img src="assets/images/bhim.jpg" class="place-image">
+                    <h3>Bhim</h3>
+                </div>
+                <div class="image-holder position-center"id="duryo" value="duryo">
+                    <img src="assets/images/Duryo.jpg" class="place-image" >
+                    <h3>Duryo</h3>
+                </div>
+                <div class="image-holder position-center" id="karna" value="karna">
+                    <img src="assets/images/karna.jpg" class="place-image">
+                    <h3>karna</h3>
+                </div>
             </div>
+
+        </section>
+        <section id="opponent">
+
+        </section>
+
     </div>
-    <div class="row" id="characterList">
-        <div class="col-sm-3 position-center">
-            <img src="assets/images/arjun.jpg" class="place-image border border-primary">
-        </div>
-        <div class="col-sm-3 position-center">
-            <img src="assets/images/bhim.jpg" class="place-image border border-primary">
-        </div>
-        <div class="col-sm-3 position-center">
-            <img src="assets/images/duryo.jpg" class="place-image border border-primary">    
-        </div>
-        <div class="col-sm-3 position-center">
-            <img src="assets/images/karna.jpg" class="place-image border border-primary">  
-        </div>
-    </div>
-    </div>
+    
 </div>
 
 
