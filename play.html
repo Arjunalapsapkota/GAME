@@ -51,14 +51,22 @@
     <a href="play.html" class="btn btn-primary" id="reset">Reset</a>
     </div>
     <div class="container" id="content">
+        
+        <!-- Game Heading -->
+        <!--************************************************************-->
+
         <div id="chooseDiv">
-            <h1 id="chooseCharacter" class="whiteText" >Choose your character:</h1>
+            <h2 id="chooseCharacter" class="whiteText" >Choose your character:</h2>
         </div>
+
+        <!--CharacterList-->
+        <!--*******************************************************************-->
         <section id="characterList">
             <div class="row">
                <div class="image-holder position-center" id="arjun" value="arjun">
                     <img src="assets/images/arjun.jpg" class="place-image">
                     <h3>Arjun</h3>
+                   
                 </div>
                 <div class="image-holder position-center" id="bhim" value="bhim">
                     <img src="assets/images/bhim.jpg" class="place-image">
@@ -73,10 +81,26 @@
                     <h3>karna</h3>
                 </div>
             </div>
+        <!--Opponenet List// Choose opponent -->
+        <!--*******************************************************************-->
+        </section>
+        <section id="choseOpponents">
+            <!--  Opponenet list-->
+            <div class="row" id="enemieslist">
+                <h2 id="enemies" class="whiteText"></h2>
+            </div>
+            <div class="row" id="opponents"></div>
+            
+        </section>
+        <section id="attackbutton">
 
         </section>
-        <section id="opponent">
-
+        <section id="selectedOpponent">
+            <div class="row" id="enemylist">
+                <h2 id="enemy" class="whiteText"></h2>
+            </div>
+            <div class="row" id="opponent"></div>
+                
         </section>
 
     </div>
