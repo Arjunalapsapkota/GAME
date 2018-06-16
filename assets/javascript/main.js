@@ -1,13 +1,20 @@
- $(document).ready(function(){
-// Jquerry code goes in here
-var flag=0;
-var player="";
-var opponent="";
-var counter=3;
-var count=0;
-var power=120;
-var playerPower=120
-var opponentPower=120;                                  // 120 HP for all characters
+
+
+    $(document).ready(function(){
+    // Jquerry code goes in here
+    var flag=0;
+    var flago=0;
+    var player="";
+    var opponent="";
+    var counter=3;
+    var pcount=0;
+    var count=5;
+    var ocount=0;
+    var power=120;
+    var playerPower=120
+    var opponentPower=120;
+    var number=0;
+
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/sword.wav");
 var button=$("<button>");
@@ -16,37 +23,52 @@ $("playNow").hide();
 
 /* Attack function goes below */
 /* Function defination goes here */
-
-
-function attackFunction(){
-    var randomNumber= function(){return Math.floor(Math.random()*4 +1);}
-    console.log(randomNumber());
-    var call=0;
-    
-    
-    var number=randomNumber();
-    var playerSword= function()
+var randomNumber= function() 
     {
-        while (call<=number)
-        {
-            call=randomNumber();
-        }
-        return call*5;
-         
+    return (Math.floor(Math.random()*10 +1))*3;
     }
-    var opponentSword= function(){}
-    playerPower=playerPower-opponentSword();
-    console.log(playerPower);
-    opponentSword=opponentPower-playerSword();
-    
-}
+
+var playerSword= function()
+    {   
+        number=randomNumber();   
+        while (number<count)
+        {
+        number=randomNumber();
+        }
+        count=number;
+        return number;       
+    }
+
+var opponentSword= function()
+    {
+        return 15;
+    }
+
+function attackFunction()
+    {
+        pcount=playerSword();
+        ocount=opponentSword();
+        console.log(pcount);
+        playerPower=playerPower-ocount;
+        console.log('player power: ',playerPower);
+        opponentPower=opponentPower-pcount;
+        console.log('Opponent power: ',opponentPower);
+        var p="#hp"+player;
+        var o="#hp"+opponent;
+        $(p).empty();
+        $(p).append(playerPower);
+        $(o).empty();
+        $(o).append(opponentPower);
+
+
+    }
 
 
 /* ####################################   */
 
 
 
-$(".image-holder").on("click",function(){
+$(".wrapper").on("click",function(){
    //Character Selection
    
    
@@ -114,27 +136,3 @@ $(".image-holder").on("click",function(){
 
 
 });
-
-
-
-// if(true)    code that selects the opponent
-//         {
-//         if(opponent==="arjun")
-//         { 
-//         $("#opponent").append($("#arjun"));
-//         }
-//         if(opponent==="bhim")
-//         {
-//         $("#opponent").append($("#bhim"));
-        
-//         }
-//         if(opponent==="duryo")
-//         {
-//         $("#opponent").append($("#duryo"));  
-       
-//         }
-//         if(opponent==="karna")
-//         {
-//         $("#opponent").append($("#karna"));
-//         }
-//         }

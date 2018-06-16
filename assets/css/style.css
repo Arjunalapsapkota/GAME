@@ -9,14 +9,6 @@ body{
     font-family: 'Eater', cursive;
     font-size:3rem;
 }
-.texts{
-    background: white;
-    opacity: .75;
-    
-}
-.whiteText{
-    color:white;
-}
 
 .btn{
     margin-left:0.5rem;
@@ -40,11 +32,7 @@ align-items: center;
     margin-top:2rem;
     color:rgb(50, 7, 150);
 }
-.place-image{
-    width:100%;
-    height:auto;
-    padding:.5rem;
-}
+
 .position-center{
     display:flex;
     justify-content: center;
@@ -57,41 +45,45 @@ align-items: center;
     display:none;
 }
 
-.image-holder{
-    position:relative;
-    float:left;
+.texts{
+    background: white;
+    opacity: .75;
+    
+}
+.whiteText{
+    color:white;
+}
+.wrapper{
+    margin:0.25rem;
+    padding:0;
     width:100px;
-    margin:10px 0 10px;
-    overflow:auto;
+    height:150px;
+    background: black;
+    float:left;
 }
-.image-holder h3{
-    
-    position: absolute;
-    bottom: 20px;
-    width: 90%;
-    padding: 15px;
-    margin-bottom: 0;
-    font-weight: 200;
-    line-height: 10px;
-    color: #fff;
+.image-wrapper{
+    width:100%;
+    height:100px;
+    background: teal;
+}
+.text-wrapper{
+    margin:0;
+    padding: 0;
+    width:100px;
+    height:50px;
+    background:rgb(104, 39, 224);
+    position:absolute;
     text-align: center;
-    background: rgba(0,123,255,.5);
-    border-bottom: 0;
-
-}
-
-.image-holder h3{
+    color:rgb(242, 248, 248);
     
-    position: absolute;
-    bottom: 20px;
-    width: 90%;
-    padding: 15px;
-    margin-bottom: 0;
-    font-weight: 200;
-    line-height: 10px;
-    color: #fff;
-    text-align: center;
-    background: rgba(0,123,255,.5);
-    border-bottom: 0;
+}
+.text-wrapper p{
+    padding:0;
+    margin:0;
+    border:0;
 
 }
+.image-holder{
+    width:100%;
+}
+
