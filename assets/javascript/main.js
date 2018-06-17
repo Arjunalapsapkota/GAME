@@ -14,6 +14,7 @@
     var playerPower=120
     var opponentPower=120;
     var number=0;
+    var lastopponent=0;
 
 var audioElement = document.createElement("audio");
 audioElement.setAttribute("src", "assets/sword.wav");
@@ -25,7 +26,7 @@ $("playNow").hide();
 /* Function defination goes here */
 var randomNumber= function() 
     {
-    return (Math.floor(Math.random()*10 +1))*3;
+    return (Math.floor(Math.random()*6 +1))*5;
     }
 
 var playerSword= function()
@@ -41,7 +42,7 @@ var playerSword= function()
 
 var opponentSword= function()
     {
-        return (Math.floor(Math.random()*7 +1))+5;
+        return (Math.floor(Math.random()*5 +1))+5;
     }
 
 function attackFunction()
@@ -57,12 +58,15 @@ function attackFunction()
         $(p).append(playerPower);
         $(o).empty();
         $(o).append(opponentPower);
-        if(playerPower<=0){alert("you lost the game");}
+        if(playerPower<=0){alert("you lost the game");
+        $(p).empty();
+        $(p).append(0);}
         var c="#"+opponent;
         if(opponentPower<=0){
         $(c).hide();
         
         }
+        if (lastopponent==1 && opponentPower<=0){alert("you won the match");}
     }
 
 
@@ -77,7 +81,7 @@ $(".wrapper").on("click",function(){
    if(flag==1)
    {
     opponent=this.id;
-    
+    opponentPower=120;
     button.empty();
     button.append("attack!");
     button.attr("id","fight");
@@ -92,6 +96,7 @@ $(".wrapper").on("click",function(){
     
     if(counter==0)                              //selects the opponent
     {
+        lastopponent=1;
         $("#choseOpponents").hide();
     }
     $("#enemy").empty();
