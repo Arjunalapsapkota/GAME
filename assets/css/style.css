@@ -57,33 +57,43 @@ align-items: center;
     margin:0.25rem;
     padding:0;
     width:100px;
-    height:150px;
+    height:100px;
     background: black;
     float:left;
 }
 .image-wrapper{
     width:100%;
     height:100px;
-    background: teal;
+    
 }
 .text-wrapper{
+    z-index: 1000;
     margin:0;
     padding: 0;
     width:100px;
-    height:50px;
+    height:30px;
     background:rgb(104, 39, 224);
-    position:absolute;
+    position:relative;
     text-align: center;
     color:rgb(242, 248, 248);
+    margin-bottom:30px;
     
 }
 .text-wrapper p{
     padding:0;
     margin:0;
     border:0;
+   
+    line-height: 15px;
 
 }
 .image-holder{
     width:100%;
 }
 
+#choseOpponents{
+    margin-top:1rem;
+}
+.place-image{
+    width:100%;
+}

@@ -41,7 +41,7 @@ var playerSword= function()
 
 var opponentSword= function()
     {
-        return 15;
+        return (Math.floor(Math.random()*7 +1))+5;
     }
 
 function attackFunction()
@@ -50,17 +50,19 @@ function attackFunction()
         ocount=opponentSword();
         console.log(pcount);
         playerPower=playerPower-ocount;
-        console.log('player power: ',playerPower);
         opponentPower=opponentPower-pcount;
-        console.log('Opponent power: ',opponentPower);
         var p="#hp"+player;
         var o="#hp"+opponent;
         $(p).empty();
         $(p).append(playerPower);
         $(o).empty();
         $(o).append(opponentPower);
-
-
+        if(playerPower<=0){alert("you lost the game");}
+        var c="#"+opponent;
+        if(opponentPower<=0){
+        $(c).hide();
+        
+        }
     }
 
 
@@ -75,6 +77,7 @@ $(".wrapper").on("click",function(){
    if(flag==1)
    {
     opponent=this.id;
+    
     button.empty();
     button.append("attack!");
     button.attr("id","fight");
